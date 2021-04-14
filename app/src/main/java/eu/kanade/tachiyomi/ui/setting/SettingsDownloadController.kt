@@ -28,6 +28,7 @@ import eu.kanade.tachiyomi.util.preference.preference
 import eu.kanade.tachiyomi.util.preference.preferenceCategory
 import eu.kanade.tachiyomi.util.preference.switchPreference
 import eu.kanade.tachiyomi.util.preference.titleRes
+import eu.kanade.tachiyomi.util.preference.summaryRes
 import eu.kanade.tachiyomi.util.system.toast
 import eu.kanade.tachiyomi.widget.materialdialogs.QuadStateCheckBox
 import eu.kanade.tachiyomi.widget.materialdialogs.listItemsQuadStateMultiChoice
@@ -84,6 +85,13 @@ class SettingsDownloadController : SettingsController() {
 
             preferences.saveChaptersAsCBZ().asImmediateFlow { isVisible = it }
                 .launchIn(viewScope)
+        }
+
+        switchPreference {
+            key = Keys.folderPerManga
+            titleRes = R.string.pref_create_folder_per_manga
+            summaryRes = R.string.pref_create_folder_per_manga_summary
+            defaultValue = false
         }
         // SY <--
 
