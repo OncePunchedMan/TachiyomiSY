@@ -42,6 +42,8 @@ class TrackSearchDialog : DialogController {
 
     private lateinit var currentlySearched: String
 
+    private var menuItemOK = binding!!.toolbar.menu.findItem(R.id.done)
+
     constructor(
         target: MangaController,
         _service: TrackService,
@@ -64,6 +66,7 @@ class TrackSearchDialog : DialogController {
 
         // Toolbar stuff
         binding!!.toolbar.setNavigationOnClickListener { dialog?.dismiss() }
+        menuItemOK.setVisible(false)
         binding!!.toolbar.setOnMenuItemClickListener {
             when (it.itemId) {
                 R.id.done -> {
@@ -80,7 +83,8 @@ class TrackSearchDialog : DialogController {
 
         // Create adapter
         adapter = TrackSearchAdapter(currentTrackUrl) { which ->
-            binding!!.toolbar.menu.findItem(R.id.done).isEnabled = which != null
+            menuItemOK.isEnabled = which != null
+            menuItemOK.setVisible(true)
         }
         binding!!.trackSearchRecyclerview.adapter = adapter
 
