@@ -64,7 +64,6 @@ class TrackSearchDialog : DialogController {
 
         // Toolbar stuff
         binding!!.toolbar.menu.findItem(R.id.done).setVisible(false)
-        binding!!.trackBtn.isVisible = false
         binding!!.toolbar.setNavigationOnClickListener { dialog?.dismiss() }
         binding!!.trackBtn.setOnClickListener {
             when (it.id) {
@@ -82,7 +81,7 @@ class TrackSearchDialog : DialogController {
         // Create adapter
         adapter = TrackSearchAdapter(currentTrackUrl) { which ->
             binding!!.trackBtn.isClickable = which != null
-            binding!!.trackBtn.isVisible = true
+            binding!!.trackBtn.isEnabled = true
         }
         binding!!.trackSearchRecyclerview.adapter = adapter
 
