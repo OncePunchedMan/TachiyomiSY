@@ -42,8 +42,6 @@ class TrackSearchDialog : DialogController {
 
     private lateinit var currentlySearched: String
 
-    private var menuItemOK = binding!!.toolbar.menu.findItem(R.id.done)
-
     constructor(
         target: MangaController,
         _service: TrackService,
@@ -65,12 +63,12 @@ class TrackSearchDialog : DialogController {
         binding = TrackSearchDialogBinding.inflate(LayoutInflater.from(activity!!))
 
         // Toolbar stuff
+        binding!!.toolbar.menu.findItem(R.id.done).setVisible(false)
         binding!!.toolbar.setNavigationOnClickListener { dialog?.dismiss() }
-        menuItemOK.setVisible(false)
-        binding!!.toolbar.setOnMenuItemClickListener {
-            when (it.itemId) {
-                R.id.done -> {
-                    val adapter = adapter ?: return@setOnMenuItemClickListener true
+        binding!!.trackBtn.setOnClickListener {
+            when (it.id) {
+                R.id.track_btn -> {
+                    val adapter = adapter ?: return@setOnClickListener
                     val item = adapter.items.getOrNull(adapter.selectedItemPosition)
                     if (item != null) {
                         trackController.presenter.registerTracking(item, service)
@@ -78,13 +76,12 @@ class TrackSearchDialog : DialogController {
                     }
                 }
             }
-            true
         }
 
         // Create adapter
         adapter = TrackSearchAdapter(currentTrackUrl) { which ->
-            menuItemOK.isEnabled = which != null
-            menuItemOK.setVisible(true)
+            binding!!.trackBtn.isClickable = which != null
+            binding!!.trackBtn.isVisible
         }
         binding!!.trackSearchRecyclerview.adapter = adapter
 
