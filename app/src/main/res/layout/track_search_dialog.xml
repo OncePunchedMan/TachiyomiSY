@@ -95,8 +95,7 @@
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="4dp"
             android:layout_weight="0"
-            android:text="@string/track_btn"
-            tools:visibility="invisible" />
+            android:text="@string/track_btn" />
 
     </LinearLayout>
 
