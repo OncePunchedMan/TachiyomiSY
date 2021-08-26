@@ -17,7 +17,6 @@
             android:layout_height="?attr/actionBarSize"
             android:theme="?attr/actionBarTheme"
             app:contentInsetStartWithNavigation="0dp"
-            app:menu="@menu/track_search"
             app:navigationIcon="@drawable/ic_close_24dp"
             app:title="@string/add_tracking" />
 

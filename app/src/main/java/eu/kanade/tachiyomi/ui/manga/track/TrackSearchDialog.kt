@@ -63,7 +63,6 @@ class TrackSearchDialog : DialogController {
         binding = TrackSearchDialogBinding.inflate(LayoutInflater.from(activity!!))
 
         // Toolbar stuff
-        binding!!.toolbar.menu.findItem(R.id.done).setVisible(false)
         binding!!.toolbar.setNavigationOnClickListener { dialog?.dismiss() }
         binding!!.trackBtn.setOnClickListener {
             val adapter = adapter ?: return@setOnClickListener
