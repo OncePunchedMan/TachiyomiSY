@@ -66,22 +66,17 @@ class TrackSearchDialog : DialogController {
         binding!!.toolbar.menu.findItem(R.id.done).setVisible(false)
         binding!!.toolbar.setNavigationOnClickListener { dialog?.dismiss() }
         binding!!.trackBtn.setOnClickListener {
-            when (it.id) {
-                R.id.track_btn -> {
-                    val adapter = adapter ?: return@setOnClickListener
-                    val item = adapter.items.getOrNull(adapter.selectedItemPosition)
-                    if (item != null) {
-                        trackController.presenter.registerTracking(item, service)
-                        dialog?.dismiss()
-                    }
-                }
+            val adapter = adapter ?: return@setOnClickListener
+            val item = adapter.items.getOrNull(adapter.selectedItemPosition)
+            if (item != null) {
+                trackController.presenter.registerTracking(item, service)
+                dialog?.dismiss()
             }
         }
 
         // Create adapter
         adapter = TrackSearchAdapter(currentTrackUrl) { which ->
-            binding!!.trackBtn.isClickable = which != null
-            binding!!.trackBtn.isEnabled = true
+            binding!!.trackBtn.isEnabled = which != null
         }
         binding!!.trackSearchRecyclerview.adapter = adapter
 
