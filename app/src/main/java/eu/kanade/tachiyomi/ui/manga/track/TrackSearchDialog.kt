@@ -137,6 +137,11 @@ class TrackSearchDialog : DialogController {
                 margin(horizontal = true)
             }
         }
+        binding!!.trackBtn.applyInsetter {
+            type(navigationBars = true) {
+                margin()
+            }
+        }
 
         return AppCompatDialog(activity!!, R.style.ThemeOverlay_Tachiyomi_Dialog_Fullscreen).apply {
             setContentView(binding!!.root)
