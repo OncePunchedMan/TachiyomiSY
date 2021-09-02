@@ -25,6 +25,7 @@ object PreferenceValues {
         DEFAULT(R.string.label_default),
         MONET(R.string.theme_monet),
         BLUE(R.string.theme_blue),
+        DRACULA(R.string.theme_dracula),
         GREEN_APPLE(R.string.theme_greenapple),
         MIDNIGHT_DUSK(R.string.theme_midnightdusk),
         STRAWBERRY_DAIQUIRI(R.string.theme_strawberrydaiquiri),

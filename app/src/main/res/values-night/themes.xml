@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <!--== Dracula Theme ==-->
+    <style name="Theme.Tachiyomi.Dracula">
+        <!-- Theme Colors -->
+        <item name="colorPrimary">@color/accent_dracula</item>
+        <item name="colorTertiary">@color/tertiary_dracula</item>
+        <item name="colorControlHighlight">@color/ripple_colored_dracula</item>
+        <item name="colorSurface">@color/surface_dracula</item>
+        <item name="android:colorBackground">@color/background_dracula</item>
+
+        <!-- Custom Attributes-->
+        <item name="colorFilterActive">@color/filter_dracula</item>
+    </style>
+
     <!--== Midnight Dusk Theme ==-->
     <style name="Theme.Tachiyomi.MidnightDusk">
         <!-- Theme Colors -->
