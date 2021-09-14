@@ -25,13 +25,15 @@
     <color name="accent_blue">#54759E</color>
     <color name="ripple_colored_blue">#1F54759E</color>
 
-    <!-- Dracula Theme -->
-    <color name="accent_dracula">#BD93F9</color>
-    <color name="tertiary_dracula">#9C981F</color>
-    <color name="background_dracula">#383A59</color>
-    <color name="surface_dracula">#282A36</color>
-    <color name="ripple_colored_dracula">#1FBD93F9</color>
-    <color name="filter_dracula">#8265AC</color>
+    <!-- Purple Theme -->
+    <color name="accent_purple">#8540ED</color>
+    <color name="color_on_primary_purple">#000000</color>
+    <color name="tertiary_purple">#7B7818</color>
+    <color name="color_on_tertiary_purple">#000000</color>
+    <color name="background_purple">#383A59</color>
+    <color name="surface_purple">#282A36</color>
+    <color name="ripple_colored_purple">#1FBD93F9</color>
+    <color name="filter_purple">#8265AC</color>
 
     <!-- Green Apple Theme -->
     <color name="accent_greenapple">#188140</color>

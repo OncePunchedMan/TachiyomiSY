@@ -89,15 +89,15 @@
         <item name="colorControlHighlight">@color/ripple_colored_blue</item>
     </style>
 
-    <!--== Dracula Theme ==-->
-    <style name="Theme.Tachiyomi.Dracula">
+    <!--== Purple Theme ==-->
+    <style name="Theme.Tachiyomi.Purple">
         <!-- Theme Colors -->
-        <item name="colorPrimary">@color/accent_dracula</item>
-        <item name="colorTertiary">@color/tertiary_dracula</item>
-        <item name="colorControlHighlight">@color/ripple_colored_dracula</item>
+        <item name="colorPrimary">@color/accent_purple</item>
+        <item name="colorTertiary">@color/tertiary_purple</item>
+        <item name="colorControlHighlight">@color/ripple_colored_purple</item>
 
         <!-- Custom Attributes-->
-        <item name="colorFilterActive">@color/filter_dracula</item>
+        <item name="colorFilterActive">@color/filter_purple</item>
     </style>
 
     <!--== Green Apple Theme ==-->

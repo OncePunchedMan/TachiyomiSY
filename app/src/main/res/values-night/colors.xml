@@ -18,6 +18,10 @@
     <color name="surface_monet" tools:targetApi="31">@android:color/system_neutral1_900</color>
     <color name="on_surface_monet" tools:targetApi="31">@android:color/system_neutral1_50</color>
 
+    <!-- Purple Theme -->
+    <color name="accent_purple">#BD93F9</color>
+    <color name="tertiary_purple">#9C981F</color>
+
     <!-- Green Apple Theme -->
     <color name="accent_greenapple">#48E484</color>
     <color name="color_on_primary_greenapple">@color/md_black_1000</color>
