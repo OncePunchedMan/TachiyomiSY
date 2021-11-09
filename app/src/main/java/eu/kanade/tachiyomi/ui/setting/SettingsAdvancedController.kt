@@ -249,7 +249,7 @@ class SettingsAdvancedController : SettingsController() {
                 summary = "%s"
                 entriesRes = arrayOf(R.string.automatic_background, R.string.lock_always, R.string.landscape, R.string.lock_never)
                 entryValues = PreferenceValues.TabletUiMode.values().map { it.name }.toTypedArray()
-                defaultValue = if (context.isTablet()) {
+                defaultValue = PreferenceValues.TabletUiMode.AUTOMATIC.name
                     PreferenceValues.TabletUiMode.AUTOMATIC
                 } else {
                     PreferenceValues.TabletUiMode.NEVER
