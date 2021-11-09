@@ -250,10 +250,6 @@ class SettingsAdvancedController : SettingsController() {
                 entriesRes = arrayOf(R.string.automatic_background, R.string.lock_always, R.string.landscape, R.string.lock_never)
                 entryValues = PreferenceValues.TabletUiMode.values().map { it.name }.toTypedArray()
                 defaultValue = PreferenceValues.TabletUiMode.AUTOMATIC.name
-                    PreferenceValues.TabletUiMode.AUTOMATIC
-                } else {
-                    PreferenceValues.TabletUiMode.NEVER
-                }.name
 
                 onChange {
                     activity?.toast(R.string.requires_app_restart)
