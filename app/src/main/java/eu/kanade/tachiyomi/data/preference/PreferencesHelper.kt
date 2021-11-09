@@ -328,7 +328,7 @@ class PreferencesHelper(val context: Context) {
 
     fun tabletUiMode() = flowPrefs.getEnum(
         Keys.tabletUiMode,
-        if (context.applicationContext.isTablet()) Values.TabletUiMode.AUTOMATIC else Values.TabletUiMode.NEVER
+        Values.TabletUiMode.AUTOMATIC
     )
 
     fun extensionInstaller() = flowPrefs.getEnum(
