@@ -89,7 +89,7 @@ class SettingsAppearanceController : SettingsController() {
                 titleRes = R.string.pref_dark_theme_pure_black
                 defaultValue = false
 
-                preferences.themeMode().asImmediateFlow { isVisible = it != Values.ThemeMode.light }
+                preferences.themeMode().asImmediateFlow { isVisible = it == Values.ThemeMode.dark }
                     .launchIn(viewScope)
 
                 onChange {

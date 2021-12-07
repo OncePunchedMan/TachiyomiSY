@@ -16,13 +16,13 @@
     <color name="midnightdusk_primaryContainer">#87003d</color>
     <color name="midnightdusk_onPrimaryContainer">#FFD9E1</color>
     <color name="midnightdusk_secondary">#BB0054</color>
-    <color name="midnightdusk_onSecondary">#FFB1C4</color>
+    <color name="midnightdusk_onSecondary">#E5E1E5</color>
     <color name="midnightdusk_secondaryContainer">#BB0054</color>
-    <color name="midnightdusk_onSecondaryContainer">#FFD9E1</color>
+    <color name="midnightdusk_onSecondaryContainer">#E5E1E5</color>
     <color name="midnightdusk_tertiary">#006638</color>
-    <color name="midnightdusk_onTertiary">#FFFFFF</color>
+    <color name="midnightdusk_onTertiary">#E5E1E5</color>
     <color name="midnightdusk_tertiaryContainer">#00894b</color>
-    <color name="midnightdusk_onTertiaryContainer">#FFDCBA</color>
+    <color name="midnightdusk_onTertiaryContainer">#E5E1E5</color>
     <color name="midnightdusk_background">#16151D</color>
     <color name="midnightdusk_onBackground">#E5E1E5</color>
     <color name="midnightdusk_surface">#16151D</color>
