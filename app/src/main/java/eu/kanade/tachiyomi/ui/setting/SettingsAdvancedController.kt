@@ -235,23 +235,6 @@ class SettingsAdvancedController : SettingsController() {
                 }
             }
         }
-
-        preferenceCategory {
-            titleRes = R.string.pref_category_display
-
-            listPreference {
-                bindTo(preferences.tabletUiMode())
-                titleRes = R.string.pref_tablet_ui_mode
-                summary = "%s"
-                entriesRes = arrayOf(R.string.automatic_background, R.string.lock_always, R.string.landscape, R.string.lock_never)
-                entryValues = PreferenceValues.TabletUiMode.values().map { it.name }.toTypedArray()
-
-                onChange {
-                    activity?.toast(R.string.requires_app_restart)
-                    true
-                }
-            }
-        }
     }
 
     private fun clearChapterCache() {

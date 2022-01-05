@@ -18,6 +18,7 @@ import eu.kanade.tachiyomi.util.preference.preferenceCategory
 import eu.kanade.tachiyomi.util.preference.switchPreference
 import eu.kanade.tachiyomi.util.preference.titleRes
 import eu.kanade.tachiyomi.util.system.isTablet
+import eu.kanade.tachiyomi.util.system.toast
 import eu.kanade.tachiyomi.widget.preference.ThemesPreference
 import java.util.Date
 import eu.kanade.tachiyomi.data.preference.PreferenceKeys as Keys
@@ -88,6 +89,23 @@ class SettingsAppearanceController : SettingsController() {
 
                 onChange {
                     activity?.let { ActivityCompat.recreate(it) }
+                    true
+                }
+            }
+        }
+
+        preferenceCategory {
+            titleRes = R.string.pref_category_display
+
+            listPreference {
+                bindTo(preferences.tabletUiMode())
+                titleRes = R.string.pref_tablet_ui_mode
+                summary = "%s"
+                entriesRes = arrayOf(R.string.automatic_background, R.string.lock_always, R.string.landscape, R.string.lock_never)
+                entryValues = eu.kanade.tachiyomi.data.preference.PreferenceValues.TabletUiMode.values().map { it.name }.toTypedArray()
+
+                onChange {
+                    activity?.toast(R.string.requires_app_restart)
                     true
                 }
             }
