@@ -36,7 +36,9 @@ fun OkHttpClient.Builder.dohGoogle() = dns(
         .url("https://dns.google/dns-query".toHttpUrl())
         .bootstrapDnsHosts(
             InetAddress.getByName("8.8.4.4"),
-            InetAddress.getByName("8.8.8.8")
+            InetAddress.getByName("8.8.8.8"),
+            InetAddress.getByName("2001:4860:4860::8888"),
+            InetAddress.getByName("2001:4860:4860::8844"),
         )
         .build()
 )
