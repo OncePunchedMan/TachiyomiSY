@@ -12,6 +12,7 @@ import java.net.InetAddress
 const val PREF_DOH_CLOUDFLARE = 1
 const val PREF_DOH_GOOGLE = 2
 const val PREF_DOH_ADGUARD = 3
+const val PREF_DOH_QUAD9 = 4
 
 fun OkHttpClient.Builder.dohCloudflare() = dns(
     DnsOverHttps.Builder().client(build())
@@ -49,6 +50,18 @@ fun OkHttpClient.Builder.dohAdGuard() = dns(
             InetAddress.getByName("94.140.14.141"),
             InetAddress.getByName("2a10:50c0::1:ff"),
             InetAddress.getByName("2a10:50c0::2:ff"),
+        )
+        .build()
+)
+
+fun OkHttpClient.Builder.dohQuad9() = dns(
+    DnsOverHttps.Builder().client(build())
+        .url("https://dns.quad9.net/dns-query".toHttpUrl())
+        .bootstrapDnsHosts(
+            InetAddress.getByName("9.9.9.9"),
+            InetAddress.getByName("149.112.112.112"),
+            InetAddress.getByName("2620:fe::fe"),
+            InetAddress.getByName("2620:fe::9"),
         )
         .build()
 )
