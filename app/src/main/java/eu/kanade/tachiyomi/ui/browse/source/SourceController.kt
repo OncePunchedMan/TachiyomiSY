@@ -1,10 +1,8 @@
 package eu.kanade.tachiyomi.ui.browse.source
 
-import android.Manifest.permission.WRITE_EXTERNAL_STORAGE
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
-import android.view.View
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.input.nestedscroll.NestedScrollConnection
@@ -14,7 +12,6 @@ import eu.kanade.tachiyomi.R
 import eu.kanade.tachiyomi.data.preference.PreferencesHelper
 import eu.kanade.tachiyomi.ui.base.controller.SearchableComposeController
 import eu.kanade.tachiyomi.ui.base.controller.pushController
-import eu.kanade.tachiyomi.ui.base.controller.requestPermissionsSafe
 import eu.kanade.tachiyomi.ui.browse.source.browse.BrowseSourceController
 import eu.kanade.tachiyomi.ui.browse.source.globalsearch.GlobalSearchController
 import eu.kanade.tachiyomi.ui.browse.source.latest.LatestUpdatesController
@@ -60,11 +57,6 @@ class SourceController : SearchableComposeController<SourcePresenter>() {
         LaunchedEffect(Unit) {
             (activity as? MainActivity)?.ready = true
         }
-    }
-
-    override fun onViewCreated(view: View) {
-        super.onViewCreated(view)
-        requestPermissionsSafe(arrayOf(WRITE_EXTERNAL_STORAGE), 301)
     }
 
     /**

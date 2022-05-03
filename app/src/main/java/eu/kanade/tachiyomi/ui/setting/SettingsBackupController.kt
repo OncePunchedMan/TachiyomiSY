@@ -38,6 +38,7 @@ import eu.kanade.tachiyomi.util.preference.preference
 import eu.kanade.tachiyomi.util.preference.preferenceCategory
 import eu.kanade.tachiyomi.util.preference.summaryRes
 import eu.kanade.tachiyomi.util.preference.titleRes
+import eu.kanade.tachiyomi.util.preference.defaultValue
 import eu.kanade.tachiyomi.util.system.DeviceUtil
 import eu.kanade.tachiyomi.util.system.openInBrowser
 import eu.kanade.tachiyomi.util.system.toast
@@ -117,6 +118,7 @@ class SettingsBackupController : SettingsController() {
                     R.string.update_weekly,
                 )
                 entryValues = arrayOf("0", "6", "12", "24", "48", "168")
+                defaultValue = "24"
                 summary = "%s"
 
                 onChange { newValue ->
